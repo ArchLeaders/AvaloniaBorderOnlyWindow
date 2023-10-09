@@ -8,6 +8,8 @@
         Height="400"
         d:DesignHeight="450"
         d:DesignWidth="800"
+        ExtendClientAreaChromeHints="SystemChrome"
+        ExtendClientAreaToDecorationsHint="True"
         SystemDecorations="BorderOnly"
         mc:Ignorable="d">
     <!--
@@ -25,7 +27,7 @@
             <StackPanel Margin="15"
                         HorizontalAlignment="Center"
                         Orientation="Horizontal">
-                <Button Name="ButtonChangeBorderType" Content="Change Border Type" />
+                <Button Name="ButtonChangeWindowState" Content="Change Window State" />
             </StackPanel>
         </StackPanel>
     </Border>

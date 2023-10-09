@@ -9,7 +9,7 @@ public partial class ShellView : Window
     public ShellView()
     {
         InitializeComponent();
-        ButtonChangeBorderType.Click += ButtonChangeBorderType_Click; ;
+        ButtonChangeBorderType.Click += ButtonChangeWindowState_Click;
 
         // TODO: Comment this out for comparing
         // /*
@@ -39,20 +39,13 @@ public partial class ShellView : Window
                     }
                 }
             }
-            // */
         });
+        // */
     }
 
-    private void ButtonChangeBorderType_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    private void ButtonChangeWindowState_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        if (SystemDecorations == SystemDecorations.BorderOnly) {
-            ExtendClientAreaToDecorationsHint = true;
-            SystemDecorations = SystemDecorations.Full;
-        }
-        else {
-            ExtendClientAreaToDecorationsHint = false;
-            SystemDecorations = SystemDecorations.BorderOnly;
-        }
+        WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
     }
 
     protected override void OnPointerPressed(PointerPressedEventArgs e)
