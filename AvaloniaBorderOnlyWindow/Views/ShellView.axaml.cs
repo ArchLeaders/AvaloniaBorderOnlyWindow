@@ -9,7 +9,7 @@ public partial class ShellView : Window
     public ShellView()
     {
         InitializeComponent();
-        ButtonChangeBorderType.Click += ButtonChangeWindowState_Click;
+        ButtonChangeWindowState.Click += ButtonChangeWindowState_Click;
 
         // TODO: Comment this out for comparing
         // /*
